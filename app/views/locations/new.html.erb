@@ -1,0 +1,27 @@
+<h1>Locations#new</h1>
+<%= form_for @location , action: :create do |f|%>
+
+    <%=f.label :location_name , "Enter the location name"%>
+    <%=f.text_field :location_name%>
+
+    <br>
+
+    <%=f.label :landmark , "Enter the landmark for that location"%>
+    <%=f.text_field :landmark%>
+
+    <br>
+
+    <%=f.label :city , "Enter the city of the location"%>
+    <%=f.text_field :city%>
+
+    <br>
+
+    <%=f.label :pincode , "Enter the pincode"%>
+    <%=f.text_field :pincode%>
+
+    <br>
+
+    <%=f.submit "Submit"%>
+
+    
+<%end%>

@@ -1,0 +1,14 @@
+<h1>BookingRequests#index</h1>
+<%if @booking_requests.length != 0%>
+    <%@booking_requests.each do |i|%>
+        <div>
+            <%="From location: #{i.from_location_name}"%>
+                <br>
+             <%="To location: #{i.to_location_name}"%>
+              <br>
+                <<%= link_to "Accept this Ride", accept_path(id: i.id) %>>              
+        </div>
+    <%end%>
+<%else%>
+  <h1>Currently no rides available for you at the moment</h1>
+<%end%>
